@@ -2,12 +2,25 @@
 <html lang="afrikaans">
 <!-- created 2018-03-12 by Isabel and Philip de Jager-->
 <head>
+<script type="text/javascript">
+
+function backgroundTarget() {
+  document.body.style.background = randColor();
+}
+
+function randColor(){
+  return '#' + (function co(lor){   return (lor +=
+    [0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f'][Math.floor(Math.random()*16)])
+    && (lor.length == 6) ?  lor : co(lor); })('');
+}
+</script>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="file icon" type="image/jpg" href="image/robot.jpg">
  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Roboto" rel="stylesheet">
 <link rel="icon" type="image/jpg" sizes="196x196" href="image/robot.jpg">
 <link rel="stylesheet" href="spinspons.css">
+<link rel="stylesheet" href="spinspons.js">
  <title>SpinSpons</title>
 </head>
 <body style='font-family: Baloo Chettan, cursive;'>
@@ -23,6 +36,7 @@
 onclick="document.getElementById('demo').innerHTML = Date()">
 datum en tyd</button>
 <p id="demo"></p>
+<button onclick="backgroundTarget()"> Verander die agtergrond </button>
 <hr/>
 <h2>Speletjies</h2>
  <ul>
